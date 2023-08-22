@@ -18,5 +18,5 @@ def index(req):
             'pressure': str(res_data['main']['pressure']),
             'humidity': str(res_data['main']['humidity']),
         }
-        print(data)
-    return render(req, 'index.html', data)
+        return render(req, 'index.html', {'data': data, 'city': city})
+    return render(req, 'index.html')
